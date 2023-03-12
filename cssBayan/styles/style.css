@@ -89,6 +89,16 @@ body {
   font-style: bold;
   font-family: "Quicksand", sans-serif;
 }
+.accordion__label,
+.accordion,
+.mem_img {
+  cursor: pointer;
+}
+
+.header_text {
+  display: flex;
+  font-size: 1.1rem;
+}
 
 .accordion__section:has(.accordion__input:checked) .meme-text {
   color: rgb(148, 71, 20);
@@ -127,52 +137,4 @@ body {
 .accordion:hover .meme-text {
   color: #944714;
   animation-delay: 1300s;
-}
-
-.accordion__label,
-.accordion,
-.mem_img {
-  cursor: pointer;
-}
-
-.header_text {
-  display: flex;
-  font-size: 1.1rem;
-}
-
-@media (max-width: 1000px) {
-  .accordion__section:has(.accordion__input:checked) .mem_img {
-    padding-bottom: 0.5rem;
-  }
-}
-@media (max-width: 700px) {
-  .meme-text {
-    font-size: 1.1rem;
-  }
-  .main_text {
-    font-size: 1.5rem;
-  }
-  .accordion__header {
-    max-height: 3vh;
-  }
-  .mem_img {
-    max-width: 30vh;
-    max-height: 30vh;
-  }
-}
-
-@media (max-width: 450px) {
-  .mem_img {
-    max-width: 20vh;
-    max-height: 20vh;
-  }
-  .meme-text {
-    margin: 0;
-  }
-  .meme-text {
-    font-size: 0.8rem;
-  }
-  .main_text {
-    font-size: 1.1rem;
-  }
 }
