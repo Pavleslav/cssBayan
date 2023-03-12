@@ -1,0 +1,178 @@
+body {
+  background-color: #d6baa3;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.header__wrapper {
+  background-color: #d6c7b8;
+  margin: 0 auto;
+  margin-top: 5vh;
+  max-width: 70%;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.accordion {
+  background-color: #e2d2c3;
+  margin: 0 auto;
+  margin-bottom: 5vh;
+  max-width: 70%;
+
+  box-shadow: 0 0 2em rgba(8, 8, 8, 0.2);
+  border-radius: 0 0 0.75rem 0.75rem;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+}
+.accordion__section:not(:last-child) {
+  border-bottom: 0.1em solid black;
+}
+.mem_img {
+  display: block;
+  max-width: 50vh;
+  height: 0;
+  margin: 0 auto;
+  padding-bottom: 0;
+  opacity: 0;
+  scale: 0;
+  transition: opacity, scale, max-height, 0.3s;
+}
+
+.main_text {
+  font-size: 1.9rem;
+}
+
+.accordion__label,
+.header_text {
+  padding: 0.4rem;
+}
+
+.accordion__label {
+  display: block;
+  color: #7a5a5a;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label-icon {
+  height: 3vh;
+  width: 3vh;
+  opacity: 0;
+  transition: opacity, rotate, 0.4s;
+}
+
+.accordion__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e2d2c3;
+}
+
+.accordion__input {
+  display: none;
+}
+
+.meme-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(52, 89, 105);
+  transition: all 0.5s;
+  font-style: bold;
+  font-family: "Quicksand", sans-serif;
+}
+
+.accordion__section:has(.accordion__input:checked) .meme-text {
+  color: rgb(148, 71, 20);
+}
+.accordion__section:has(.accordion__input:checked) .mem_img {
+  height: auto;
+  padding-bottom: 1.5rem;
+  opacity: 1;
+  scale: 1;
+}
+
+.accordion__section:has(.accordion__input:checked) .label-icon {
+  rotate: 45deg;
+}
+.accordion__section:has(.accordion__input:checked) .accordion__content {
+  padding: 0.4rem;
+}
+
+.accordion:hover .label-icon {
+  opacity: 1;
+}
+
+.accordion__section:has(.accordion__input:hover) .mem_img {
+  height: auto;
+  padding-bottom: 1.5rem;
+  opacity: 1;
+  scale: 1;
+}
+
+.accordion__section:has(.accordion__input:hover) .label-icon {
+  rotate: 45deg;
+}
+.accordion__section:has(.accordion__input:hover) .accordion__content {
+  padding: 0.4rem;
+}
+.accordion:hover .meme-text {
+  color: #944714;
+  animation-delay: 1300s;
+}
+
+.accordion__label,
+.accordion,
+.mem_img {
+  cursor: pointer;
+}
+
+.header_text {
+  display: flex;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1000px) {
+  .accordion__section:has(.accordion__input:checked) .mem_img {
+    padding-bottom: 0.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .meme-text {
+    font-size: 1.1rem;
+  }
+  .main_text {
+    font-size: 1.5rem;
+  }
+  .accordion__header {
+    max-height: 3vh;
+  }
+  .mem_img {
+    max-width: 30vh;
+    max-height: 30vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .mem_img {
+    max-width: 20vh;
+    max-height: 20vh;
+  }
+  .meme-text {
+    margin: 0;
+  }
+  .meme-text {
+    font-size: 0.8rem;
+  }
+  .main_text {
+    font-size: 1.1rem;
+  }
+}
