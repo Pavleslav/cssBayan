@@ -163,7 +163,7 @@ body {
     max-height: 30vh;
   }
   .accordion:hover .label-icon {
-    display: n;
+    display: none;
   }
 }
 
