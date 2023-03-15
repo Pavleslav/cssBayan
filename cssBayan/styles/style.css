@@ -108,25 +108,11 @@ body {
   padding-bottom: 1.5rem;
   opacity: 1;
   scale: 1;
-  animation: brightness 0.3s backwards 0.3s;
 }
-@keyframes brightness {
-  0% {
-    filter: brightness(100%);
-  }
-  25% {
-    filter: brightness(75%);
-  }
-  50%{
-    filter: brightness(50%);
-  }
-  75% {
-    filter: brightness(75%);
-  }
-  100% {
-    filter: brightness(100%);
-  }
+.accordion__section:active .mem_img{
+  filter: blur(5vh);
 }
+
 .accordion__section:has(.accordion__input:checked) .label-icon {
   rotate: 45deg;
 }
@@ -175,6 +161,9 @@ body {
   .mem_img {
     max-width: 30vh;
     max-height: 30vh;
+  }
+  .accordion:hover .label-icon {
+    display: n;
   }
 }
 
